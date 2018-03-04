@@ -9,7 +9,7 @@
       <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
       <init-param>
           <param-name>javax.ws.rs.Application</param-name>
-          <param-value>com.example.ResourceConfig</param-value>
+          <param-value>com.ucab.tesis.servicio.Configuracion</param-value>
       </init-param>
   </servlet>
   <servlet-mapping>

@@ -5,10 +5,7 @@
  */
 package com.ucab.tesis.servicio;
 
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider;
+
 import java.util.HashSet;
 import java.util.Set;
 import javax.ws.rs.ApplicationPath;

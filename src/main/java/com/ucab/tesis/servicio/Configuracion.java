@@ -24,7 +24,7 @@ public class Configuracion extends org.glassfish.jersey.server.ResourceConfig{
     {
         super();
         registerJsonProvider();
-        packages("com.ucab.tesis");
+        packages("com.ucab.tesis.servicio");
     }
     /** register a provider to handle JSON request and response */
 	private void registerJsonProvider() {

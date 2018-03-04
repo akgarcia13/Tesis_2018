@@ -9,6 +9,8 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider;
+import java.util.HashSet;
+import java.util.Set;
 import javax.ws.rs.ApplicationPath;
 
 import javax.ws.rs.core.Application;
@@ -18,22 +20,19 @@ import javax.ws.rs.core.Application;
  * @author Miguelangel
  */
 @ApplicationPath("api")
-public class Configuracion extends org.glassfish.jersey.server.ResourceConfig{
+public class Configuracion extends  Application {
     
     public Configuracion()
     {
-        super();
-        registerJsonProvider();
-        packages("com.ucab.tesis.servicio");
+       
     }
-    /** register a provider to handle JSON request and response */
-	private void registerJsonProvider() {
+    public Set<Class<?>> getClasses() {
+      HashSet<Class<?>> set = new HashSet<Class<?>>();
+      set.add(ImagenServicio.class);
+      set.add(AudioServicio.class);
+      set.add(UsuarioServicio.class);
+      return set;
+   }
 
-		ObjectMapper mapper = new ObjectMapper();
-		mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-		mapper.configure(SerializationFeature.WRITE_NULL_MAP_VALUES, false);
-		JacksonJaxbJsonProvider provider = new JacksonJaxbJsonProvider();
-		provider.setMapper(mapper);
-		register(provider);
-}
+   
 }

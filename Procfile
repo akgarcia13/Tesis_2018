@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* tesis
+web: java -cp target/classes:target/dependency/* com.ucab.tesis.modelo.Main

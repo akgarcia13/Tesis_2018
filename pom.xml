@@ -18,12 +18,12 @@
             <artifactId>jersey-json</artifactId>
             <version>1.18.1</version>
         </dependency>
+        
+        
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>42.1.4.jre7</version>
-            <type>tar.gz</type>
-            <classifier>dist</classifier>
+            <version>9.4.1208</version>
         </dependency>
     </dependencies>
     <build>
@@ -42,16 +42,17 @@
                         <configuration>
                             <artifactItems>
                                 <artifactItem>
-                                    <groupId>org.eclipse.jetty</groupId>
-                                    <artifactId>jetty-runner</artifactId>
-                                    <version>9.3.3.v20150827</version>
-                                    <destFileName>jetty-runner.jar</destFileName>
+                                    <groupId>com.github.jsimone</groupId>
+                                    <artifactId>webapp-runner</artifactId>
+                                    <version>8.0.30.2</version>
+                                    <destFileName>webapp-runner.jar</destFileName>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
 </project>

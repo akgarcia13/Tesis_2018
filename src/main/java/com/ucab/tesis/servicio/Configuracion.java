@@ -26,13 +26,6 @@ public class Configuracion extends  Application {
     {
        
     }
-    public Set<Class<?>> getClasses() {
-      HashSet<Class<?>> set = new HashSet<Class<?>>();
-      set.add(ImagenServicio.class);
-      set.add(AudioServicio.class);
-      set.add(UsuarioServicio.class);
-      return set;
-   }
-
+    
    
 }

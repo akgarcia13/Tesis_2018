@@ -45,7 +45,7 @@ public class UsuarioServicio {
      * 
      * Si existe un problema retorna un objeto null
      */ 
-    /*@POST
+    @POST
     @Path("/login")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
@@ -56,7 +56,7 @@ public class UsuarioServicio {
                         user.getUs_nombre_usuario(), 
                         user.getUs_password())
         ).build();
-    }*/
+    }
     
    
     

@@ -111,11 +111,11 @@ public class UsuarioServicio {
     @DELETE
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response eliminarUsuario(@PathParam("id") int id)
+    public boolean eliminarUsuario(@PathParam("id") int id)
     {
         int flag = dao.eliminarUsuario(id);
         
-         return Response.ok(1).build();
+         return true;
     }
     
     /**
@@ -127,7 +127,7 @@ public class UsuarioServicio {
     @PUT
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response actualizarUsuario(Usuario user)
+    public boolean actualizarUsuario(Usuario user)
     {
        int resultado = dao.actualizarUsuario(
                         user.getUs_id(),
@@ -140,9 +140,9 @@ public class UsuarioServicio {
                         user.getUs_password()
         );
         if (resultado < 0)  
-            return Response.status(Response.Status.NOT_FOUND).build();
+            return false;
         
-        return Response.status(Response.Status.OK).entity(user).build();
+        return true;
         
     }
     
@@ -155,14 +155,14 @@ public class UsuarioServicio {
     @Path("/recuperar-contrasena")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response recuperarContrasenaUsuario(Usuario user)
+    public Usuario recuperarContrasenaUsuario(Usuario user)
     {
        
-        return Response.status(Response.Status.ACCEPTED).entity(
+        return 
         dao.recuperarContrasenaUsuario(
                 user.getUs_nombre_usuario(),
                 user.getUs_email()
-        )).build();
+        );
     }
     
     /**
@@ -175,12 +175,12 @@ public class UsuarioServicio {
     @Path("/aumentar-nivel")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response aumentarNivelUsuario(Usuario user)
+    public boolean aumentarNivelUsuario(Usuario user)
     {
        dao.aumentarNivelUsuario(
                 user.getUs_id()
         );
-        return Response.status(Response.Status.OK).build();
+        return true;
     }
     
 }

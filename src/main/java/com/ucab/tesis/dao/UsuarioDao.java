@@ -155,7 +155,7 @@ public class UsuarioDao {
         Usuario user;
         try {
             user = new Usuario();
-            postgresProcedure = conn.prepareCall("{call loginusuario(?,?)}");
+            postgresProcedure = conn.prepareCall("{call loginusuario(?,?,?)}");
 
             postgresProcedure.setString(1, _nombreUsuario);
             postgresProcedure.setString(2, _clave);

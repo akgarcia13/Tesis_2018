@@ -58,7 +58,8 @@ public class UsuarioServicio {
         ).build();*/
         return dao.loginUsuario(
                         user.getUs_nombre_usuario(), 
-                        user.getUs_password());
+                        user.getUs_password(),
+                        user.getUs_email());
     }
    
    

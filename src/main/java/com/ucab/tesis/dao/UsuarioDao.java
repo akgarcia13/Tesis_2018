@@ -149,7 +149,8 @@ public class UsuarioDao {
 
     public Usuario loginUsuario(
             String _nombreUsuario,
-            String _clave) {
+            String _clave,
+            String _email) {
         conn = conexion.conexionBaseDeDatos();
         Usuario user;
         try {
@@ -158,6 +159,7 @@ public class UsuarioDao {
 
             postgresProcedure.setString(1, _nombreUsuario);
             postgresProcedure.setString(2, _clave);
+            postgresProcedure.setString(3, _email);
 
             
             boolean flag = postgresProcedure.execute();

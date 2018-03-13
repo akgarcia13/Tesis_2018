@@ -14,7 +14,7 @@ import javax.ws.rs.core.Application;
 
 /**
  *
- * @author Miguelangel
+ * @author Astrid
  */
 @ApplicationPath("api")
 public class Configuracion extends  Application {

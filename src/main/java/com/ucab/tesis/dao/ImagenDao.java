@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Miguelangel
+ * @author Astrid
  */
 public class ImagenDao {
     private ConexionBaseDeDatos conexion = new ConexionBaseDeDatos();

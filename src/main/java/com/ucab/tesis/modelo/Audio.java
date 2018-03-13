@@ -7,7 +7,7 @@ package com.ucab.tesis.modelo;
 
 /**
  *
- * @author Miguelangel
+ * @author Astrid
  */
 public class Audio {
     private int au_id;

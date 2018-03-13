@@ -28,7 +28,7 @@ import javax.ws.rs.core.Response;
 
 /**
  *
- * @author Miguelangel
+ * @author Astrid
  */
 @Path("usuarios")
 public class UsuarioServicio {

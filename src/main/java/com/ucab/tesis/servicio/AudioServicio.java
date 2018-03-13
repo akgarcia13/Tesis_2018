@@ -7,6 +7,7 @@ package com.ucab.tesis.servicio;
 
 import com.ucab.tesis.dao.AudioDao;
 import com.ucab.tesis.dao.ImagenDao;
+import com.ucab.tesis.modelo.Audio;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -17,7 +18,7 @@ import javax.ws.rs.core.Response;
 
 /**
  *
- * @author Miguelangel
+ * @author Astrid
  */
 @Path("audios")
 public class AudioServicio {
@@ -32,11 +33,11 @@ public class AudioServicio {
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response retornaAudioJSON(@PathParam ("id") int id)
+    public Audio retornaAudioJSON(@PathParam ("id") int id)
     {
-       return Response.status(Response.Status.ACCEPTED).entity(
-        audioDao.retornaAudio(id)
-        ).build();
+       return 
+        audioDao.retornaAudio(id);
+        
     }
     
     /**

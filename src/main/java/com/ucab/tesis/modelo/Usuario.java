@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Miguelangel
+ * @author Astrid
  */
 public class Usuario {
     private int us_id =-1;

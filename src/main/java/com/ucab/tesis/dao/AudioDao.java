@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Miguelangel
+ * @author Astrid
  */
 public class AudioDao {
     private ConexionBaseDeDatos conexion = new ConexionBaseDeDatos();

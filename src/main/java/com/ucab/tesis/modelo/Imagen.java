@@ -7,7 +7,7 @@ package com.ucab.tesis.modelo;
 
 /**
  *
- * @author Miguelangel
+ * @author Astrid
  */
 public class Imagen {
     private int ima_id;

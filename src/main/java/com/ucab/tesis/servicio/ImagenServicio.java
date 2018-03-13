@@ -6,6 +6,7 @@
 package com.ucab.tesis.servicio;
 
 import com.ucab.tesis.dao.ImagenDao;
+import com.ucab.tesis.modelo.Imagen;
 import com.ucab.tesis.modelo.Usuario;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -18,7 +19,7 @@ import javax.ws.rs.core.Response;
 
 /**
  *
- * @author Miguelangel
+ * @author Astrid
  */
 @Path("imagenes")
 public class ImagenServicio {
@@ -33,11 +34,11 @@ public class ImagenServicio {
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response retornaImagenJSON(@PathParam ("id") int id)
+    public Imagen retornaImagenJSON(@PathParam ("id") int id)
     {
-       return Response.status(Response.Status.ACCEPTED).entity(
-        imagenDao.retornaImagen(id)
-        ).build();
+       return 
+        imagenDao.retornaImagen(id);
+        
     }
     
     /**

@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Miguelangel
+ * @author Astrid
  */
 public class ConexionBaseDeDatos {
     private Connection conexion =null;
